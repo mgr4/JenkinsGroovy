@@ -6,6 +6,7 @@ node {
     stage('Build') {
        try{
         echo 'Building....'
+        sh 'sudo apt update'
         sh 'dotnet --version'
         sh "dotnet build ConsoleApp1"
         echo "Building New feature"
