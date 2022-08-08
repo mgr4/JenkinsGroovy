@@ -2,7 +2,7 @@ import java.io.*
 import groovy.io.*
 
 @NonCPS
-println ("We are in releasenotes.groovy script configured as part of global shared libraries")
+println("We are in releasenotes script configured as part of global shared libraries")
 def call(Map config=[:]){
 def dir = new File(pwd())
 
