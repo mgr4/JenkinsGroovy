@@ -1,3 +1,3 @@
-echo "The releasenotes script is part of Global shred library script"
-echo "Script executed successfully"
-echo "Bye..."
+println "The releasenotes script is part of Global shred library script"
+println "Script executed successfully"
+println "Bye..."
