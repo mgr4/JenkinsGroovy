@@ -1,4 +1,4 @@
-abstract class User{
+class User{
 String ln;
 String fn
 
@@ -11,16 +11,10 @@ return fn.substring(0,1).toLowerCase() + ln.toLowerCase()
 }
 }
 
-class Artist extends User{
-public String[] Songs;
-}
 
-class Producer extends User{
-public void Produce() {}
+String[] fn = ["Bob","Julie","Lisa"]
+String[] ln = ["Dylan","Lyne","Petty"]
+for (int i=0; i<fn.size(); i++){
+User u=new User(fn: fn[i], ln: ln[i])
+println("Username is ${u.Username()}")
 }
-
-User[] users = [new Artist(fn: "Bob", ln: "Dylan", Songs:["Its alright ma"]),
-                new Artist(fn: "Julie", ln: "Lyne", Songs:["Crying"]),
-                new Artist(fn: "Lisa", ln: "Petty", Songs:["Its raining"])]
-                
-users.each(user -> println("Username is ${user.Username()}"));
