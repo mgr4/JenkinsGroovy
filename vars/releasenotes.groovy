@@ -2,7 +2,7 @@ import java.io.*
 import groovy.io.*
 
 def call(Map config=[:]){
-def dir = new File("C:\\code\\JenkinsGroovy\\ConsoleApp1")
+def dir = new File(pwd())
 
 new File(dir.path + '/releasenotes.txt').withWriter('utf-8') 
 	{ 
