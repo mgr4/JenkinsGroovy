@@ -5,6 +5,7 @@ import groovy.io.*
 def call(Map config=[:]){
 def dir = new File(pwd())
 
+echo "Build number is : ${BUILD_NUMBER}"
 new File(dir.path + '/releasenotes.txt').withWriter('utf-8')
         {
                 writer ->
