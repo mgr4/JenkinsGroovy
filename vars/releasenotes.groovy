@@ -3,7 +3,7 @@ import groovy.io.*
 
 @NonCPS
 def call(Map config=[:]){
-def dir = new File(pwd())
+def dir = new File(System.getProperty("user.dir"))
 
 echo "Build number is : ${BUILD_NUMBER}"
 new File(dir.path + '/releasenotes.txt').withWriter('utf-8')
