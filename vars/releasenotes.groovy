@@ -3,10 +3,10 @@ import groovy.io.*
 
 @NonCPS
 def call(Map config=[:]){
-def dir = new File(System.getProperty("user.dir"))
+def dir = "/home/jenkins/ben/workspace/HelloPipeline"
 
 echo "Build number is : ${BUILD_NUMBER}"
-new File(dir.path + '/releasenotes.txt').withWriter('utf-8')
+new File(dir + '/releasenotes.txt').withWriter('utf-8')
         {
                 writer ->
             dir.eachFileRecurse(FileType.ANY) { file ->
